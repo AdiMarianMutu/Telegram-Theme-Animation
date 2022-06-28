@@ -1,0 +1,28 @@
+#theme-toggler {
+  position: relative;
+  z-index: 9999;
+}
+
+#theme-animation {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  pointer-events: none;
+}
+
+@keyframes theme-animation {
+  from {
+    clip-path: circle(140% at 0% 0%);
+  }
+  to {
+    clip-path: circle(0% at 0% 0%);
+  }
+}
+
+.theme-animation_do {
+  animation: theme-animation .5s ease-in-out;
+  animation-fill-mode: forwards;
+}
