@@ -4,6 +4,7 @@ window.currentTheme = 'light';
   document.getElementById('theme-animation').addEventListener('animationend', function () {
     this.children[0].remove();
     this.classList.remove('theme-animation_do');
+    document.body.style.overflow = 'auto';
   });
 })();
 
@@ -14,6 +15,8 @@ function toggleTheme() {
   const btnThemeToggler = document.getElementById('theme-toggler');
 
   if (!document.getElementById('theme-animation')?.classList.contains('theme-animation_do')) {
+    BODY.style.overflow = 'hidden';
+
     html2canvas(ROOT, {
       allowTaint: true,
       removeContainer: true,
