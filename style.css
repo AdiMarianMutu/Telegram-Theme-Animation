@@ -1,3 +1,7 @@
+body {
+  height: 10000px;
+}
+
 .main {
   padding: 1rem;
   border: 1px solid black;
